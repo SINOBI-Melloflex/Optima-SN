@@ -24,6 +24,10 @@
     <img src="https://img.shields.io/badge/View-Live%20Demo-16A34A?style=for-the-badge&logo=googlechrome&logoColor=white" alt="View Demo">
   </a>
 
+  <a href="https://sinobi-melloflex.github.io/Optima-SN-License/check/">
+    <img src="https://img.shields.io/badge/Check-Your%20License-F59E0B?style=for-the-badge&logo=keycdn&logoColor=white" alt="Check Your License">
+  </a>
+
   <br><br>
 
   <p><b>Created by SD SIFAT</b></p>
@@ -331,6 +335,15 @@ Official installers are published only on this GitHub page. Always verify the SH
 
 ---
 
+## License & Activation
+
+OptimaSN runs with a license key from your supplier. Enter the key on the activation page the first time you open the app. The license is checked online, and the app keeps working for up to 7 days if the internet is temporarily unavailable.
+
+- **Check your license:** [Open the License Check page](https://sinobi-melloflex.github.io/Optima-SN-License/check/) and type your key to see if it is active and when it expires.
+- To renew or extend a license, contact your supplier.
+
+---
+
 ## Support
 
 For technical support, project inquiries, feature discussions or collaboration, please contact the OptimaSN project team or open an issue on this page.
@@ -353,8 +366,12 @@ For technical support, project inquiries, feature discussions or collaboration, 
     <a href="https://github.com/SINOBI-Melloflex/Optima-SN/releases/latest/download/OptimaSN-Setup.exe">Download for Windows</a>
     &nbsp;|&nbsp;
     <a href="https://optima.ranonline.com.bd/">Live Demo</a>
+    &nbsp;|&nbsp;
+    <a href="https://sinobi-melloflex.github.io/Optima-SN-License/check/">License Check</a>
   </p>
 
   <sub>(c) OptimaSN. All Rights Reserved.</sub>
 
 </div>
+
+<div align="right"><sub>Admin only: <a href="https://sinobi-melloflex.github.io/Optima-SN-License/admin/">Sign in</a></sub></div>
