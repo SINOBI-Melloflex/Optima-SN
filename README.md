@@ -1,7 +1,6 @@
-
 <div align="center">
 
-  <img src="https://optimasn.tail8cc524.ts.net/icon.png" alt="OptimaSN Logo" width="150" />
+  <img src="assets/icon.png" alt="OptimaSN Logo" width="150" />
 
   <h1>OptimaSN</h1>
   <h3>International Digital Inventory Management System</h3>
@@ -9,7 +8,7 @@
   <p><b>Unlimited Products. Smarter Inventory. Complete Business Control.</b></p>
 
   <p>
-    <img src="https://img.shields.io/badge/Platform-Web%20Based-0078D6?style=for-the-badge" alt="Platform">
+    <img src="https://img.shields.io/badge/Platform-Windows-0078D6?style=for-the-badge" alt="Platform">
     <img src="https://img.shields.io/badge/Inventory-Management-06B6D4?style=for-the-badge" alt="Inventory">
     <img src="https://img.shields.io/badge/Scanning-QR%20%7C%20Camera-16A34A?style=for-the-badge" alt="Scanning">
     <img src="https://img.shields.io/badge/Business-Management-932C8E?style=for-the-badge" alt="Business">
@@ -17,12 +16,8 @@
 
   <br>
 
-  <a href="#windows-download">
+  <a href="https://github.com/SINOBI-Melloflex/Optima-SN/releases/latest/download/OptimaSN-Setup.exe">
     <img src="https://img.shields.io/badge/Download%20for-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Download for Windows">
-  </a>
-
-  <a href="#linux-download">
-    <img src="https://img.shields.io/badge/Download%20for-Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Download for Linux">
   </a>
 
   <a href="https://optima.ranonline.com.bd/">
@@ -37,7 +32,47 @@
 
 ---
 
-## 🚀 Overview
+## Download
+
+<div align="center">
+
+  <a href="https://github.com/SINOBI-Melloflex/Optima-SN/releases/latest/download/OptimaSN-Setup.exe">
+    <img src="https://img.shields.io/badge/Download%20OptimaSN%20for%20Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Download OptimaSN for Windows">
+  </a>
+
+  <p>Windows 10 or 11, 64-bit. Everything needed is included. No internet connection is required to install.</p>
+  <p><a href="https://github.com/SINOBI-Melloflex/Optima-SN/releases/latest">All versions and release notes</a> &nbsp;|&nbsp; Linux: coming soon</p>
+
+</div>
+
+### How to install
+
+1. Click **Download OptimaSN for Windows**. The installer downloads straight away.
+2. Run the downloaded file `OptimaSN-Setup.exe` and follow the wizard. You choose where to install OptimaSN and where to keep your data.
+3. When it finishes, open **http://localhost:4015** in your browser and create your admin account right away.
+4. To use OptimaSN from phones and other computers on the same Wi-Fi or network, open the **System** page inside OptimaSN. It shows the address to type on those devices.
+
+If Windows shows **"Windows protected your PC"**, click **More info** and then **Run anyway**. This message appears for new software that is not yet widely downloaded.
+
+### Updates
+
+Open **System** inside OptimaSN and press **Check for Update**. If a new version exists, press **Install update**. Your data is never touched by an update.
+
+### Verify your download (recommended)
+
+Download only from this page. To confirm the file is genuine, run this in PowerShell in the folder where the file was saved:
+
+    Get-FileHash .\OptimaSN-Setup.exe -Algorithm SHA256
+
+The result must match the SHA256 value shown on the [latest release page](https://github.com/SINOBI-Melloflex/Optima-SN/releases/latest). If it does not match, do not run the file. Files from any other website are not official.
+
+### View Live Demo
+
+Explore the OptimaSN interface through the live demo: **[Open OptimaSN Live Demo](https://optima.ranonline.com.bd/)**
+
+---
+
+## Overview
 
 **OptimaSN** is a powerful, universal and comprehensive Digital Inventory Management System designed to manage products, inventory, sales, purchases, warranties, customer accounts, vendor accounts and complete business financial operations from one centralized platform.
 
@@ -49,45 +84,11 @@ OptimaSN is not just a QR scanner or stock management application. It is a compl
 
 With support for compatible QR/barcode scanners and camera-based scanning, users can manage products through dedicated scanning devices, desktop cameras or mobile phone cameras.
 
-**From product entry to final sales, warranty checks, returns, refunds and financial reporting — everything is managed in one place.**
+**From product entry to final sales, warranty checks, returns, refunds and financial reporting, everything is managed in one place.**
 
 ---
 
-## 📥 Download & Live Demo
-
-<div align="center">
-
-  <a href="#windows-download">
-    <img src="https://img.shields.io/badge/Download%20for-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows Download">
-  </a>
-
-  <a href="#linux-download">
-    <img src="https://img.shields.io/badge/Download%20for-Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux Download">
-  </a>
-
-  <a href="https://optima.ranonline.com.bd/">
-    <img src="https://img.shields.io/badge/View-Live%20Demo-16A34A?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Demo">
-  </a>
-
-</div>
-
-### <a id="windows-download"></a>🪟 Download for Windows
-
-Windows installer download will be published here when the official release is available.
-
-### <a id="linux-download"></a>🐧 Download for Linux
-
-Linux installer download will be published here when the official release is available.
-
-### 🌐 View Live Demo
-
-Explore the OptimaSN interface and experience its front-page design through the live demo.
-
-**[Open OptimaSN Live Demo](https://optima.ranonline.com.bd/)**
-
----
-
-## ✨ Core Features
+## Core Features
 
 - **Universal Product Management:** Manage different types of products without being restricted to a specific industry.
 - **QR Code Scanning:** Add and identify products using QR code scanning workflows.
@@ -109,14 +110,14 @@ Explore the OptimaSN interface and experience its front-page design through the 
 - **Reports & Charts:** Visualize business performance through dashboard analytics.
 - **User Management:** Manage users and system access.
 - **Role & Permission Management:** Control access to different system modules.
+- **Automatic Backups:** A database backup is made automatically every 4 hours.
+- **Built-in Updates:** Check for and install new versions from inside the application.
 
 ---
 
-## 📦 Product & Inventory Management
+## Product & Inventory Management
 
 OptimaSN provides a centralized environment for managing different kinds of products and inventory operations.
-
-### Key Capabilities
 
 - Add new products to inventory.
 - Manage product information and records.
@@ -126,20 +127,14 @@ OptimaSN provides a centralized environment for managing different kinds of prod
 - Track available stock quantities.
 - Monitor sold products and remaining stock.
 - View total inventory value.
-- Identify low-stock products.
-- Monitor out-of-stock products.
+- Identify low-stock and out-of-stock products.
 - Review product-wise stock information.
-- Maintain organized inventory records.
 
 ---
 
-## 📷 Smart QR, Barcode & Camera Scanner
+## Smart QR, Barcode & Camera Scanner
 
-OptimaSN is not limited to dedicated scanner machines.
-
-The system supports flexible product scanning workflows using compatible scanners and camera-enabled devices.
-
-### Supported Scanning Methods
+OptimaSN is not limited to dedicated scanner machines. The system supports flexible product scanning workflows using compatible scanners and camera-enabled devices.
 
 - QR Code Scanner
 - Compatible Barcode Scanner
@@ -147,41 +142,30 @@ The system supports flexible product scanning workflows using compatible scanner
 - Laptop Camera
 - Mobile Phone Camera
 
-Users can scan product codes and perform supported product identification operations without depending entirely on external scanning hardware.
+Phone camera scanning works on your local network using the secure (https) address shown on the System page.
 
 ---
 
-## 🛒 Sales & Purchase Management
+## Sales & Purchase Management
 
 ### Sales Management
 
-- Process product sales.
-- Maintain sales transaction records.
-- Track customer purchases.
-- Monitor total sales.
-- View recent sales history.
-- Review product-wise sales performance.
-- Access invoice information.
-- Monitor sales trends.
+- Process product sales and maintain sales transaction records.
+- Track customer purchases and monitor total sales.
+- View recent sales history and product-wise sales performance.
+- Access invoice information and monitor sales trends.
 - Track sold product quantities.
 
 ### Purchase & Stock-In Management
 
-- Record incoming products.
-- Add products to inventory.
-- Maintain stock-in records.
-- Track product quantities.
+- Record incoming products and add them to inventory.
+- Maintain stock-in records and track product quantities.
 - Support cash and credit-based purchase workflows.
 - Monitor purchase-related financial records.
-- Organize product acquisition information.
 
 ---
 
-## 🛡️ Warranty Management
-
-OptimaSN includes warranty-related product checking and management capabilities.
-
-### Features
+## Warranty Management
 
 - Check product warranty information.
 - Access warranty-related product details.
@@ -190,161 +174,97 @@ OptimaSN includes warranty-related product checking and management capabilities.
 
 ---
 
-## ↩️ Returns, Refunds & Replacements
+## Returns, Refunds & Replacements
 
-OptimaSN provides a dedicated Returns & Refunds management module.
-
-### Features
-
-- Process customer product returns.
-- Record refund transactions.
-- Track returned products.
-- Manage products returned to stock.
-- Monitor replacement products.
-- Record return reasons.
-- Track rejected return requests.
-- Review refund history.
-- Monitor total refunded amounts.
-- Track cleared amounts and replacement-related payments.
+- Process customer product returns and record refund transactions.
+- Track returned products and manage products returned to stock.
+- Monitor replacement products and record return reasons.
+- Track rejected return requests and review refund history.
+- Monitor total refunded amounts, cleared amounts and replacement-related payments.
 
 ---
 
-## 👥 Customer Management & Ledger
+## Customer Management & Ledger
 
-Manage customer accounts and financial activities through a centralized customer management system.
-
-### Features
-
-- Maintain customer records.
-- Track customer-wise outstanding balances.
-- Manage credit-based transactions.
-- Monitor customer dues.
-- Record due collections.
-- Track received payments.
-- Review customer transaction information.
-- View customer financial summaries.
+- Maintain customer records and track customer-wise outstanding balances.
+- Manage credit-based transactions and monitor customer dues.
+- Record due collections and track received payments.
+- Review customer transaction information and financial summaries.
 - Monitor total receivable amounts.
 
 ---
 
-## 🏭 Vendor & Supplier Management
+## Vendor & Supplier Management
 
-OptimaSN provides vendor and supplier financial management capabilities.
-
-### Features
-
-- Maintain vendor-related financial records.
-- Track outstanding vendor balances.
-- Record payments made to vendors.
-- Monitor total vendor payables.
-- Track vendor-wise outstanding amounts.
+- Maintain vendor-related financial records and outstanding balances.
+- Record payments made to vendors and monitor total vendor payables.
 - Manage vendor-related returns and refunds.
-- Review vendor payment history.
-- Monitor supplier financial activities.
+- Review vendor payment history and supplier financial activities.
 
 ---
 
-## 📒 Ledger & Financial Management
+## Ledger & Financial Management
 
 OptimaSN integrates business financial tracking with inventory operations.
 
-### Financial Capabilities
-
-- Customer Ledger
-- Vendor Ledger
-- Customer Due Tracking
-- Vendor Payables
-- Due Collection
-- Vendor Payments
-- Cash Received
-- Cash Paid
+- Customer Ledger and Vendor Ledger
+- Customer Due Tracking and Vendor Payables
+- Due Collection and Vendor Payments
+- Cash Received and Cash Paid
 - Credit Transactions
 - Outstanding Balance Tracking
 - Money Position Overview
 - Financial Transaction Records
 
-This helps businesses maintain better visibility into their financial activities without separating inventory operations from account management.
-
 ---
 
-## 💰 Cash Management & Operational Costs
-
-Monitor business cash flow and operational expenses through dedicated financial sections.
+## Cash Management & Operational Costs
 
 ### Money Position
 
-- Total money receivable from customers.
-- Total outstanding customer dues.
+- Total money receivable from customers and outstanding customer dues.
 - Recovered money.
-- Total money payable to vendors.
-- Vendor outstanding balances.
-- Cash received.
-- Cash paid.
-- Current cash position.
+- Total money payable to vendors and vendor outstanding balances.
+- Cash received, cash paid and current cash position.
 
 ### Operational Cost Management
 
-- Record operational expenses.
-- Track monthly operating costs.
-- Monitor all-time operational costs.
-- Review total business costs.
-- Analyze net profit.
-- View cost trends.
-- Review expense categories.
+- Record operational expenses and track monthly operating costs.
+- Monitor all-time operational costs and total business costs.
+- Analyze net profit, cost trends and expense categories.
 
 ---
 
-## 📊 Dashboard & Business Analytics
+## Dashboard & Business Analytics
 
-OptimaSNAP provides a centralized dashboard to monitor important business activities and financial statistics.
+OptimaSN provides a centralized dashboard to monitor important business activities and financial statistics.
 
-### Dashboard Highlights
-
-- Total Sales
-- Today's Sales
-- Total Profit
-- Stock Value
-- Available Stock
-- Sold Products
-- Customer Dues
-- Vendor Payables
-- Money Received
-- Money Paid
-- Cash Position
-- Operational Costs
-- Returns & Refunds
-- Sales Trends
-- Cost Trends
-- Top-Selling Products
-- Low-Stock Alerts
+- Total Sales, Today's Sales and Total Profit
+- Stock Value, Available Stock and Sold Products
+- Customer Dues and Vendor Payables
+- Money Received, Money Paid and Cash Position
+- Operational Costs and Returns & Refunds
+- Sales Trends and Cost Trends
+- Top-Selling Products and Low-Stock Alerts
 - Product-Wise Stock Distribution
 - Recent Sales Records
-- Outstanding Customer Balances
-- Vendor Payment Summaries
-
-The dashboard provides visual summaries, statistics, charts and business insights to help users monitor their overall business operations.
+- Outstanding Customer Balances and Vendor Payment Summaries
 
 ---
 
-## 👨‍💼 User & System Administration
-
-OptimaSN includes administrative modules for managing system operations and user access.
-
-### Available Modules
+## User & System Administration
 
 - User Management
 - Role Management
 - Permissions Management
 - Activity Logs
-- System Settings
-- Due Collection
-- Vendor Payables
-- Invoice Management
-- Operational Cost Management
+- System Settings and Network Access Information
+- Update Management
+- Due Collection, Vendor Payables, Invoice Management and Operational Cost Management
 
 ---
 
-## 🖥️ Application Screenshots
+## Application Screenshots
 
 ### Main Dashboard
 
@@ -364,13 +284,9 @@ OptimaSN includes administrative modules for managing system operations and user
 
 ---
 
-## 🌍 Universal Business Support
+## Universal Business Support
 
-OptimaSN is designed to support flexible inventory workflows for businesses across different industries.
-
-It is not restricted to ISP products or networking equipment.
-
-Potential applications include:
+OptimaSN is designed to support flexible inventory workflows for businesses across different industries. It is not restricted to ISP products or networking equipment.
 
 - ISP & Networking Equipment Management
 - Electronics & Accessories
@@ -382,11 +298,9 @@ Potential applications include:
 - General Product-Based Businesses
 - Technology & Digital Product Businesses
 
-The system provides a unified approach to product management, stock tracking, sales and financial operations.
-
 ---
 
-## 🎯 Why Choose OptimaSN?
+## Why Choose OptimaSN?
 
 | Feature | Benefit |
 |---|---|
@@ -405,52 +319,27 @@ The system provides a unified approach to product management, stock tracking, sa
 | Cash Management | Monitor business cash position |
 | Analytics | Understand business performance |
 | Operational Costs | Track business expenses |
+| Easy Install & Update | One installer, one-click updates |
 
 ---
 
-## 🌐 Official Website & Live Demo
+## Security & Access Management
 
-<div align="center">
+OptimaSN includes user and role-management functionality to support controlled access to system modules. Your data is stored on your own computer. Use a strong admin password, create your admin account immediately after installing, and copy your backup folder to another disk or USB drive regularly.
 
-  <a href="https://optimasn.tail8cc524.ts.net/">
-    <img src="https://img.shields.io/badge/Official-OptimaSN-0078D6?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Official OptimaSN">
-  </a>
-
-  <a href="https://optima.ranonline.com.bd/">
-    <img src="https://img.shields.io/badge/View-Live%20Demo-16A34A?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Demo">
-  </a>
-
-  <p><b>Experience Smarter Digital Inventory Management.</b></p>
-
-</div>
+Official installers are published only on this GitHub page. Always verify the SHA256 checksum as described above.
 
 ---
 
-## 📖 Documentation
+## Support
 
-This repository README provides an overview of OptimaSN and its major modules and capabilities.
-
-Additional technical documentation, installation instructions, API references and developer guides can be added as the corresponding technical documentation becomes available.
-
----
-
-## 🔒 Security & Access Management
-
-OptimaSN includes user and role-management functionality to support controlled access to system modules.
-
-Production deployments should follow appropriate security practices, including secure authentication, access control, protected connections and regular data backups.
-
----
-
-## 🤝 Support & Contributions
-
-For technical support, project inquiries, feature discussions or collaboration, please contact the OptimaSN project team.
+For technical support, project inquiries, feature discussions or collaboration, please contact the OptimaSN project team or open an issue on this page.
 
 ---
 
 <div align="center">
 
-  <img src="https://optimasn.tail8cc524.ts.net/icon.png" alt="OptimaSN Logo" width="100">
+  <img src="assets/icon.png" alt="OptimaSN Logo" width="100">
 
   <h2>OptimaSN</h2>
 
@@ -458,16 +347,14 @@ For technical support, project inquiries, feature discussions or collaboration, 
 
   <p><b>One Platform. Complete Inventory Control.</b></p>
 
-  <p>
-    Created with dedication by <b>SD SIFAT</b>
-  </p>
+  <p>Created with dedication by <b>SD SIFAT</b></p>
 
   <p>
-    <a href="https://optimasn.tail8cc524.ts.net/">Official Application</a>
+    <a href="https://github.com/SINOBI-Melloflex/Optima-SN/releases/latest/download/OptimaSN-Setup.exe">Download for Windows</a>
     &nbsp;|&nbsp;
     <a href="https://optima.ranonline.com.bd/">Live Demo</a>
   </p>
 
-  <sub>© OptimaSN. All Rights Reserved.</sub>
+  <sub>(c) OptimaSN. All Rights Reserved.</sub>
 
 </div>
