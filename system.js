@@ -78,26 +78,6 @@ module.exports = function (app) {
     } catch (e) { res.json({ ok: true, lines: [] }); }
   });
 
-  app.post('/api/system/sync-backup', (req, res) => {
-    if (!isAdm(req)) return res.status(403).json({ ok: false, msg: 'Admins only.' });
-    const guardPath = path.join(__dirname, 'tunnel', 'guard.js');
-    execFile(process.execPath, [guardPath], { timeout: 30000 }, (err, so, se) => {
-      const out = String(so || '') + String(se || '');
-      let logTail = '';
-      try { const lg = path.join(__dirname, 'data', 'guard.log'); logTail = fs.readFileSync(lg, 'utf8').trim().split('\n').slice(-5).join('\n'); } catch (e) {}
-      res.json({ ok: !err, output: out.trim(), log: logTail });
-    });
-  });
-
-  app.get('/api/system/guard-log', (req, res) => {
-    if (!isAdm(req)) return res.status(403).json({ ok: false, msg: 'Admins only.' });
-    try {
-      const lg = path.join(__dirname, 'data', 'guard.log');
-      const lines = fs.readFileSync(lg, 'utf8').trim().split('\n').slice(-5);
-      res.json({ ok: true, lines });
-    } catch (e) { res.json({ ok: true, lines: [] }); }
-  });
-
   const isAdm = req => !!(req.user && req.user.admin);
 
   app.get('/system', (req, res) => {

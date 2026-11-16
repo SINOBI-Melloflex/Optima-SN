@@ -25,26 +25,7 @@
   });
 })();
 </script>
-<div style="margin-top:12px;">
-  <div><label>Backup sync</label></div>
-  <button id="syncBtn" type="button">Sync Backup Now</button>
-  <div id="syncResult" style="margin-top:8px;font-size:13px;white-space:pre-wrap;"></div>
-</div>
-<script>
-(function(){
-  var btn = document.getElementById('syncBtn');
-  var out = document.getElementById('syncResult');
-  function showLog(lines) { out.textContent = (lines && lines.length) ? lines.join('\n') : 'No sync activity recorded yet.'; }
-  fetch('/api/system/guard-log').then(function(r){return r.json();}).then(function(d){ if (d.ok) showLog(d.lines); }).catch(function(){});
-  btn.addEventListener('click', function(){
-    btn.disabled = true; out.textContent = 'Checking database and syncing with the latest backup...';
-    fetch('/api/system/sync-backup', { method: 'POST' }).then(function(r){return r.json();}).then(function(d){
-      btn.disabled = false;
-      out.textContent = (d.output || '') + (d.log ? ('\n' + d.log) : '');
-    }).catch(function(){ btn.disabled = false; out.textContent = 'Sync failed to run.'; });
-  });
-})();
-</script>
+
   </div>
 </div>
 
