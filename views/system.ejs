@@ -1,0 +1,159 @@
+<%- include('partials/header', {title:'System'}) %>
+<h2>System</h2>
+<div class="card">
+  <div class="row">
+    <div><label>Server</label><b style="color:#34e0a1">Running</b></div>
+    <div><label>Database</label><b style="color:<%= health === 'Healthy' ? '#34e0a1' : '#ff6b7a' %>"><%= health %></b></div>
+    <div><label>Last backup</label><b><%= backup %></b></div>
+<div style="margin-top:12px;">
+  <div><label>Backup sync</label></div>
+  <button id="syncBtn" type="button">Sync Backup Now</button>
+  <div id="syncResult" style="margin-top:8px;font-size:13px;white-space:pre-wrap;"></div>
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('syncBtn');
+  var out = document.getElementById('syncResult');
+  function showLog(lines) { out.textContent = (lines && lines.length) ? lines.join('\n') : 'No sync activity recorded yet.'; }
+  fetch('/api/system/guard-log').then(function(r){return r.json();}).then(function(d){ if (d.ok) showLog(d.lines); }).catch(function(){});
+  btn.addEventListener('click', function(){
+    btn.disabled = true; out.textContent = 'Checking database and syncing with the latest backup...';
+    fetch('/api/system/sync-backup', { method: 'POST' }).then(function(r){return r.json();}).then(function(d){
+      btn.disabled = false;
+      out.textContent = (d.output || '') + (d.log ? ('\n' + d.log) : '');
+    }).catch(function(){ btn.disabled = false; out.textContent = 'Sync failed to run.'; });
+  });
+})();
+</script>
+<div style="margin-top:12px;">
+  <div><label>Backup sync</label></div>
+  <button id="syncBtn" type="button">Sync Backup Now</button>
+  <div id="syncResult" style="margin-top:8px;font-size:13px;white-space:pre-wrap;"></div>
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('syncBtn');
+  var out = document.getElementById('syncResult');
+  function showLog(lines) { out.textContent = (lines && lines.length) ? lines.join('\n') : 'No sync activity recorded yet.'; }
+  fetch('/api/system/guard-log').then(function(r){return r.json();}).then(function(d){ if (d.ok) showLog(d.lines); }).catch(function(){});
+  btn.addEventListener('click', function(){
+    btn.disabled = true; out.textContent = 'Checking database and syncing with the latest backup...';
+    fetch('/api/system/sync-backup', { method: 'POST' }).then(function(r){return r.json();}).then(function(d){
+      btn.disabled = false;
+      out.textContent = (d.output || '') + (d.log ? ('\n' + d.log) : '');
+    }).catch(function(){ btn.disabled = false; out.textContent = 'Sync failed to run.'; });
+  });
+})();
+</script>
+  </div>
+</div>
+
+<div class="card">
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+    <b>Network access</b>
+    <button type="button" id="btnInfo">&#9432; How it works</button>
+  </div>
+  <p class="hint">Open OptimaSN from any phone, tablet or computer connected to the same Wi-Fi or network as this computer. Type one of these addresses in the browser of that device.</p>
+  <div id="addrs"><p class="hint">Looking for this computer's address...</p></div>
+  <div id="infoBox" style="display:none;margin-top:12px;padding:12px 14px;border-radius:10px;background:rgba(127,127,127,.12);border:1px solid rgba(127,127,127,.3);font-size:14px;line-height:1.6">
+    <b>How to use OptimaSN on other devices</b>
+    <ol style="margin:8px 0 8px 18px;padding:0">
+      <li>Keep this computer switched on. OptimaSN runs here and starts automatically with Windows.</li>
+      <li>Connect the other device to the <b>same Wi-Fi / network</b> as this computer.</li>
+      <li>On that device open a browser and type an address from the list above, for example <b>http://192.168.1.20:4015</b>.</li>
+      <li>Log in with your OptimaSN user name and password.</li>
+    </ol>
+    <b>Scanning with a phone camera</b>
+    <p style="margin:4px 0 8px">Phones only allow the camera on a secure address. Use the <b>https://</b> address from the list. The first time, the browser shows a security warning because the certificate is created on this computer. Choose <i>Advanced</i> and then <i>Continue</i>. This is normal and safe on your own network.</p>
+    <b>If the address does not open</b>
+    <ul style="margin:4px 0 8px 18px;padding:0">
+      <li>Check both devices are on the same network (not a guest Wi-Fi, and no VPN).</li>
+      <li>Use the address with the correct number. If this computer's address changes, come back to this page and read the new one.</li>
+      <li>Make sure this computer is on and OptimaSN shows <i>Running</i> above.</li>
+    </ul>
+    <b>Good to know</b>
+    <ul style="margin:4px 0 0 18px;padding:0">
+      <li>OptimaSN is available only inside your own network, not from the internet.</li>
+      <li>Your data stays on this computer. A backup is made automatically every 4 hours. Copy the backup folder to a USB drive or another disk regularly.</li>
+      <li>Updates need an internet connection on this computer. Use <b>Check for Update</b> below. Your data is never touched by an update.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card"><b>Updates</b>
+  <p class="hint">Installed version: <b id="ver"><%= version %></b></p>
+  <p>Status: <b id="updst">Not checked yet</b></p>
+  <div class="camrow" style="margin-top:10px">
+    <button type="button" id="btnCheck">Check for Update</button>
+    <button type="button" id="btnInstall" style="display:none">Install update</button>
+  </div>
+</div>
+
+<div class="card"><b>License</b>
+  <p>Status: <b id="licst">Checking...</b></p>
+  <p class="hint">This computer's ID: <b id="licid">-</b></p>
+</div>
+<script>
+fetch('/api/license/status',{cache:'no-store'}).then(function(r){return r.json();}).then(function(j){
+  var s=document.getElementById('licst');
+  s.textContent=j.ok?(j.lifetime?'Active (lifetime)':'Active until '+j.exp):'Not active';
+  s.style.color=j.ok?'#34e0a1':'#ff6b7a';
+  document.getElementById('licid').textContent=j.machine||'-';
+}).catch(function(){});
+</script><pre id="sysout" style="background:rgba(127,127,127,.12);border:1px solid rgba(127,127,127,.3);border-radius:8px;padding:10px;min-height:70px;max-height:220px;overflow:auto;white-space:pre-wrap;font-size:13px"></pre>
+<script>
+(function () {
+  var out = document.getElementById('sysout');
+  function log(m) { if (!m) return; out.textContent += new Date().toLocaleTimeString() + '  ' + m + '\n'; out.scrollTop = out.scrollHeight; }
+  function get(url) { return fetch(url, { cache: 'no-store' }).then(function (r) { return r.json(); }); }
+  function post(url) { return fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: '{}' }).then(function (r) { return r.json(); }); }
+  function copy(text) {
+    try { navigator.clipboard.writeText(text).then(function () { log('Copied: ' + text); }); }
+    catch (e) { var t = document.createElement('input'); t.value = text; document.body.appendChild(t); t.select(); document.execCommand('copy'); document.body.removeChild(t); log('Copied: ' + text); }
+  }
+  document.getElementById('btnInfo').onclick = function () {
+    var b = document.getElementById('infoBox'); b.style.display = b.style.display === 'none' ? 'block' : 'none';
+  };
+
+  var box = document.getElementById('addrs');
+  get('/api/system/info').then(function (j) {
+    box.innerHTML = '';
+    if (!j.addrs || !j.addrs.length) { box.innerHTML = '<p class="hint">No network connection found. Connect this computer to your Wi-Fi or network cable.</p>'; return; }
+    j.addrs.forEach(function (a) {
+      [['Browser, all devices', 'http://' + a.ip + ':' + j.httpPort], ['Phone camera scanning (secure)', 'https://' + a.ip + ':4016']].forEach(function (x) {
+        var wrap = document.createElement('div'); wrap.style.margin = '8px 0';
+        var lab = document.createElement('label'); lab.textContent = x[0] + '  (' + a.name + ')';
+        var row = document.createElement('div'); row.style.cssText = 'display:flex;gap:8px;align-items:center';
+        var inp = document.createElement('input'); inp.readOnly = true; inp.value = x[1]; inp.style.flex = '1';
+        var btn = document.createElement('button'); btn.type = 'button'; btn.textContent = 'Copy'; btn.onclick = function () { copy(x[1]); };
+        row.appendChild(inp); row.appendChild(btn); wrap.appendChild(lab); wrap.appendChild(row); box.appendChild(wrap);
+      });
+    });
+  }).catch(function () { box.innerHTML = '<p class="hint">Could not read the network address.</p>'; });
+
+  var st = document.getElementById('updst'), bc = document.getElementById('btnCheck'), bi = document.getElementById('btnInstall');
+  function setSt(t, c) { st.textContent = t; st.style.color = c || ''; }
+  bc.onclick = function () {
+    bc.disabled = true; setSt('Checking...');
+    get('/api/system/update/check').then(function (j) {
+      if (!j.ok) { setSt(j.msg || 'Could not check.', '#ff6b7a'); return; }
+      if (j.available) { setSt('Version ' + j.latest + ' is available.', '#34e0a1'); bi.style.display = ''; log('New version ' + j.latest + ' found (installed: ' + j.current + ').'); }
+      else { setSt('You have the latest version (' + j.current + ').', '#34e0a1'); bi.style.display = 'none'; }
+    }).catch(function () { setSt('Could not reach the update server. Check the internet connection.', '#ff6b7a'); })
+      .then(function () { bc.disabled = false; });
+  };
+  function waitBack() {
+    fetch('/login', { cache: 'no-store' }).then(function (r) { if (r.ok) location.reload(); else setTimeout(waitBack, 4000); }).catch(function () { setTimeout(waitBack, 4000); });
+  }
+  bi.onclick = function () {
+    if (!confirm('Install the update now?\n\nOptimaSN will restart for about a minute. Your data is not touched.')) return;
+    bi.disabled = true; bc.disabled = true; setSt('Downloading and installing...'); log('Downloading the update. Please do not close this page...');
+    post('/api/system/update/install').then(function (j) {
+      log(j.msg);
+      if (j.ok) { setSt('Installing. This page reloads when OptimaSN is back.'); setTimeout(waitBack, 60000); }
+      else { setSt(j.msg, '#ff6b7a'); bi.disabled = false; bc.disabled = false; }
+    }).catch(function () { setSt('Installing. This page reloads when OptimaSN is back.'); setTimeout(waitBack, 60000); });
+  };
+})();
+</script>
+<%- include('partials/footer') %>
