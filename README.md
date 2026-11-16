@@ -12,8 +12,26 @@
     <img src="https://img.shields.io/badge/Platform-Web%20Based-0078D6?style=for-the-badge" alt="Platform">
     <img src="https://img.shields.io/badge/Inventory-Management-06B6D4?style=for-the-badge" alt="Inventory">
     <img src="https://img.shields.io/badge/Scanning-QR%20%7C%20Camera-16A34A?style=for-the-badge" alt="Scanning">
-    <img src="https://img.shields.io/badge/Business-Management-932C8E?style=for-the-badge" alt="Business Management">
+    <img src="https://img.shields.io/badge/Business-Management-932C8E?style=for-the-badge" alt="Business">
   </p>
+
+  <br>
+
+  <a href="#windows-download">
+    <img src="https://img.shields.io/badge/Download%20for-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Download for Windows">
+  </a>
+
+  <a href="#linux-download">
+    <img src="https://img.shields.io/badge/Download%20for-Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Download for Linux">
+  </a>
+
+  <a href="https://optima.ranonline.com.bd/">
+    <img src="https://img.shields.io/badge/View-Live%20Demo-16A34A?style=for-the-badge&logo=googlechrome&logoColor=white" alt="View Demo">
+  </a>
+
+  <br><br>
+
+  <p><b>Created by SD SIFAT</b></p>
 
 </div>
 
@@ -23,7 +41,7 @@
 
 **OptimaSN** is a powerful, universal and comprehensive Digital Inventory Management System designed to manage products, inventory, sales, purchases, warranties, customer accounts, vendor accounts and complete business financial operations from one centralized platform.
 
-Unlike traditional inventory software designed for specific product categories, OptimaSN is built to support **different types of products across different industries and businesses.**
+Unlike traditional inventory software designed for specific product categories, OptimaSN is built to support different types of products across different industries and businesses.
 
 Whether you manage ISP equipment, networking devices, electronics, computer accessories, mobile devices, office supplies or other products, OptimaSN provides a complete solution for managing your business inventory.
 
@@ -32,6 +50,40 @@ OptimaSN is not just a QR scanner or stock management application. It is a compl
 With support for compatible QR/barcode scanners and camera-based scanning, users can manage products through dedicated scanning devices, desktop cameras or mobile phone cameras.
 
 **From product entry to final sales, warranty checks, returns, refunds and financial reporting — everything is managed in one place.**
+
+---
+
+## 📥 Download & Live Demo
+
+<div align="center">
+
+  <a href="#windows-download">
+    <img src="https://img.shields.io/badge/Download%20for-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows Download">
+  </a>
+
+  <a href="#linux-download">
+    <img src="https://img.shields.io/badge/Download%20for-Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux Download">
+  </a>
+
+  <a href="https://optima.ranonline.com.bd/">
+    <img src="https://img.shields.io/badge/View-Live%20Demo-16A34A?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Demo">
+  </a>
+
+</div>
+
+### <a id="windows-download"></a>🪟 Download for Windows
+
+Windows installer download will be published here when the official release is available.
+
+### <a id="linux-download"></a>🐧 Download for Linux
+
+Linux installer download will be published here when the official release is available.
+
+### 🌐 View Live Demo
+
+Explore the OptimaSN interface and experience its front-page design through the live demo.
+
+**[Open OptimaSN Live Demo](https://optima.ranonline.com.bd/)**
 
 ---
 
@@ -96,8 +148,6 @@ The system supports flexible product scanning workflows using compatible scanner
 - Mobile Phone Camera
 
 Users can scan product codes and perform supported product identification operations without depending entirely on external scanning hardware.
-
-This makes inventory operations more flexible and convenient.
 
 ---
 
@@ -179,7 +229,7 @@ Manage customer accounts and financial activities through a centralized customer
 
 ## 🏭 Vendor & Supplier Management
 
-OptimaSN also provides vendor and supplier financial management capabilities.
+OptimaSN provides vendor and supplier financial management capabilities.
 
 ### Features
 
@@ -358,19 +408,19 @@ The system provides a unified approach to product management, stock tracking, sa
 
 ---
 
-## 🌐 Access OptimaSN
+## 🌐 Official Website & Live Demo
 
 <div align="center">
 
   <a href="https://optimasn.tail8cc524.ts.net/">
-    <img src="https://img.shields.io/badge/OPEN-OPTIMASN-0078D6?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Open OptimaSN">
+    <img src="https://img.shields.io/badge/Official-OptimaSN-0078D6?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Official OptimaSN">
+  </a>
+
+  <a href="https://optima.ranonline.com.bd/">
+    <img src="https://img.shields.io/badge/View-Live%20Demo-16A34A?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Demo">
   </a>
 
   <p><b>Experience Smarter Digital Inventory Management.</b></p>
-
-  <p>
-    <a href="https://optimasn.tail8cc524.ts.net/">Visit OptimaSN</a>
-  </p>
 
 </div>
 
@@ -404,12 +454,18 @@ For technical support, project inquiries, feature discussions or collaboration, 
 
   <h2>OptimaSN</h2>
 
-  <p><b>Unlimited Products. Unlimited Possibilities.</b></p>
+  <h3>Unlimited Products. Unlimited Possibilities.</h3>
 
-  <p>One Platform. Complete Inventory Control.</p>
+  <p><b>One Platform. Complete Inventory Control.</b></p>
+
+  <p>
+    Created with dedication by <b>SD SIFAT</b>
+  </p>
 
   <p>
     <a href="https://optimasn.tail8cc524.ts.net/">Official Application</a>
+    &nbsp;|&nbsp;
+    <a href="https://optima.ranonline.com.bd/">Live Demo</a>
   </p>
 
   <sub>© OptimaSN. All Rights Reserved.</sub>
