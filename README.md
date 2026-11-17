@@ -8,10 +8,10 @@
   <p><b>Unlimited Products. Smarter Inventory. Complete Business Control.</b></p>
 
   <p>
-    <img src="https://img.shields.io/badge/Platform-Windows-0078D6?style=for-the-badge" alt="Platform">
-    <img src="https://img.shields.io/badge/Inventory-Management-06B6D4?style=for-the-badge" alt="Inventory">
-    <img src="https://img.shields.io/badge/Scanning-QR%20%7C%20Camera-16A34A?style=for-the-badge" alt="Scanning">
-    <img src="https://img.shields.io/badge/Business-Management-932C8E?style=for-the-badge" alt="Business">
+    <a href="#how-to-install-windows"><img src="https://img.shields.io/badge/Platform-Windows-0078D6?style=for-the-badge" alt="Platform Windows"></a>
+    <a href="#product-and-inventory-management"><img src="https://img.shields.io/badge/Inventory-Management-06B6D4?style=for-the-badge" alt="Inventory Management"></a>
+    <a href="#smart-qr-barcode-and-camera-scanner"><img src="https://img.shields.io/badge/Scanning-QR%20%7C%20Camera-16A34A?style=for-the-badge" alt="QR and Camera Scanning"></a>
+    <a href="#cash-management-and-operational-costs"><img src="https://img.shields.io/badge/Business-Management-932C8E?style=for-the-badge" alt="Business Management"></a>
   </p>
 
   <br>
@@ -36,6 +36,7 @@
 
   <p>
     <a href="#download">Download</a> &nbsp;|&nbsp;
+    <a href="#requirements">Requirements</a> &nbsp;|&nbsp;
     <a href="#how-to-install-windows">Install Guide</a> &nbsp;|&nbsp;
     <a href="#first-time-setup">First-Time Setup</a> &nbsp;|&nbsp;
     <a href="#ports-and-network-access">Ports</a> &nbsp;|&nbsp;
@@ -87,6 +88,17 @@
 
 ---
 
+## Requirements
+
+- Windows 10 or Windows 11, 64-bit.
+- Administrator rights on the computer, needed once during installation.
+- About 500 MB of free disk space, plus room for your data and backups.
+- A modern web browser such as Chrome, Edge or Firefox.
+- Internet access only for license activation and for checking updates.
+- For phones and other computers: all devices on the same Wi-Fi or network.
+
+---
+
 ## How to install (Windows)
 
 1. Click **Download Windows Installer** above. The file `OptimaSN-Setup.exe` downloads straight away.
@@ -103,7 +115,7 @@ Download only from this page. To confirm the file is genuine, open PowerShell in
 
     Get-FileHash .\OptimaSN-Setup.exe -Algorithm SHA256
 
-The result must match the SHA256 value shown on the [latest release page](https://github.com/SINOBI-Melloflex/Optima-SN/releases/latest). If it does not match, do not run the file. Files from any other website are not official.
+The result must match the SHA256 value in the `.sha256.txt` file on the [latest release page](https://github.com/SINOBI-Melloflex/Optima-SN/releases/latest). If it does not match, do not run the file. Files from any other website are not official.
 
 ### Updates
 
@@ -140,8 +152,7 @@ OptimaSN runs as a small web server on the computer where it is installed. Staff
 | Port | Used for |
 |---|---|
 | **4015** | Main OptimaSN web address. On the installed computer use `http://localhost:4015`. |
-| **4016** | Local-network access used together with the secure address shown on the System page. |
-| **80 and 443** | Standard web and secure (https) access on the local network, used for phone camera scanning. |
+| **4016, 80 and 443** | Additional local-network ports opened by the installer for secure (https) access and phone camera scanning. The **System** page shows which address to use. |
 
 The installer opens these ports in Windows Firewall for **local network addresses only** (`10.x.x.x`, `172.16-31.x.x` and `192.168.x.x`). They are **not** opened to the public internet, so people outside your network cannot reach OptimaSN.
 
@@ -166,8 +177,8 @@ The **System** page inside OptimaSN always shows the exact addresses to use. If 
 
 - OptimaSN stores all your data on **your own computer** in the `data` folder inside the installation folder.
 - A database backup is made automatically **every 4 hours**.
-- Backups are saved in the backup folder chosen during installation. If none was chosen, the default is `C:\ProgramData\OptimaSN\Backups`.
-- The **System** page shows the last backup time and a database health check, and has a **Sync Backup** button.
+- Backups are saved in the backup folder set during installation. If none was set, the default is `C:\ProgramData\OptimaSN\Backups`.
+- The **System** page shows the database health status and has a **Sync Backup** button that runs a database check.
 - Copy the backup folder to **another disk or USB drive regularly**. A backup on the same disk will not help if that disk fails.
 
 ---
