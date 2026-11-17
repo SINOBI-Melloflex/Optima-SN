@@ -20,8 +20,12 @@
     <img src="https://img.shields.io/badge/Download%20for-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Download for Windows">
   </a>
 
+  <a href="#linux">
+    <img src="https://img.shields.io/badge/Linux-Coming%20Soon-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux - Coming Soon">
+  </a>
+
   <a href="https://optima.ranonline.com.bd/">
-    <img src="https://img.shields.io/badge/View-Live%20Demo-16A34A?style=for-the-badge&logo=googlechrome&logoColor=white" alt="View Demo">
+    <img src="https://img.shields.io/badge/View-Live%20Demo-16A34A?style=for-the-badge&logo=googlechrome&logoColor=white" alt="View Live Demo">
   </a>
 
   <a href="https://sinobi-melloflex.github.io/Optima-SN-License/check/">
@@ -29,6 +33,16 @@
   </a>
 
   <br><br>
+
+  <p>
+    <a href="#download">Download</a> &nbsp;|&nbsp;
+    <a href="#how-to-install-windows">Install Guide</a> &nbsp;|&nbsp;
+    <a href="#first-time-setup">First-Time Setup</a> &nbsp;|&nbsp;
+    <a href="#ports-and-network-access">Ports</a> &nbsp;|&nbsp;
+    <a href="#use-from-phones-and-other-computers">Phones and Other PCs</a> &nbsp;|&nbsp;
+    <a href="#license-and-activation">License</a> &nbsp;|&nbsp;
+    <a href="#troubleshooting">Troubleshooting</a>
+  </p>
 
   <p><b>Created by SD SIFAT</b></p>
 
@@ -40,39 +54,138 @@
 
 <div align="center">
 
-  <a href="https://github.com/SINOBI-Melloflex/Optima-SN/releases/latest/download/OptimaSN-Setup.exe">
-    <img src="https://img.shields.io/badge/Download%20OptimaSN%20for%20Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Download OptimaSN for Windows">
-  </a>
+  <table>
+    <tr>
+      <td align="center" width="260">
+        <h3>Windows</h3>
+        <p>Windows 10 or 11, 64-bit</p>
+        <a href="https://github.com/SINOBI-Melloflex/Optima-SN/releases/latest/download/OptimaSN-Setup.exe">
+          <img src="https://img.shields.io/badge/Download-Windows%20Installer-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Download Windows Installer">
+        </a>
+      </td>
+      <td align="center" width="260">
+        <h3>Linux</h3>
+        <p>Coming soon</p>
+        <a href="#linux">
+          <img src="https://img.shields.io/badge/Linux-Coming%20Soon-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux Coming Soon">
+        </a>
+      </td>
+      <td align="center" width="260">
+        <h3>Live Demo</h3>
+        <p>Try it in your browser</p>
+        <a href="https://optima.ranonline.com.bd/">
+          <img src="https://img.shields.io/badge/Open-Live%20Demo-16A34A?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Open Live Demo">
+        </a>
+      </td>
+    </tr>
+  </table>
 
-  <p>Windows 10 or 11, 64-bit. Everything needed is included. No internet connection is required to install.</p>
-  <p><a href="https://github.com/SINOBI-Melloflex/Optima-SN/releases/latest">All versions and release notes</a> &nbsp;|&nbsp; Linux: coming soon</p>
+  <p>Everything needed is included in the installer. No internet connection is required to install.</p>
+  <p><a href="https://github.com/SINOBI-Melloflex/Optima-SN/releases/latest">All versions and release notes</a></p>
 
 </div>
 
-### How to install
+---
 
-1. Click **Download OptimaSN for Windows**. The installer downloads straight away.
-2. Run the downloaded file `OptimaSN-Setup.exe` and follow the wizard. You choose where to install OptimaSN and where to keep your data.
-3. When it finishes, open **http://localhost:4015** in your browser and create your admin account right away.
-4. To use OptimaSN from phones and other computers on the same Wi-Fi or network, open the **System** page inside OptimaSN. It shows the address to type on those devices.
+## How to install (Windows)
+
+1. Click **Download Windows Installer** above. The file `OptimaSN-Setup.exe` downloads straight away.
+2. Double-click the downloaded file and accept the administrator prompt. Follow the wizard. By default OptimaSN installs to `C:\Program Files\OptimaSN`, and you can pick another folder.
+3. Wait until the installer finishes. OptimaSN starts automatically in the background and starts again every time Windows starts. You do not need to launch anything manually.
+4. Open your browser and go to **http://localhost:4015** (or use the **OptimaSN** shortcut on your desktop).
+5. Create your admin account right away, then enter your license key (see [License and Activation](#license-and-activation)).
 
 If Windows shows **"Windows protected your PC"**, click **More info** and then **Run anyway**. This message appears for new software that is not yet widely downloaded.
 
-### Updates
-
-Open **System** inside OptimaSN and press **Check for Update**. If a new version exists, press **Install update**. Your data is never touched by an update.
-
 ### Verify your download (recommended)
 
-Download only from this page. To confirm the file is genuine, run this in PowerShell in the folder where the file was saved:
+Download only from this page. To confirm the file is genuine, open PowerShell in the folder where the file was saved and run:
 
     Get-FileHash .\OptimaSN-Setup.exe -Algorithm SHA256
 
 The result must match the SHA256 value shown on the [latest release page](https://github.com/SINOBI-Melloflex/Optima-SN/releases/latest). If it does not match, do not run the file. Files from any other website are not official.
 
-### View Live Demo
+### Updates
 
-Explore the OptimaSN interface through the live demo: **[Open OptimaSN Live Demo](https://optima.ranonline.com.bd/)**
+1. Open **System** inside OptimaSN.
+2. Press **Check for Update**.
+3. If a new version exists, press **Install update**. The app updates itself and restarts.
+
+Your data is never touched by an update. Your license and backups stay as they are.
+
+### Uninstall
+
+Open **Windows Settings > Apps > Installed apps**, find **OptimaSN** and choose **Uninstall**. Copy your backup folder somewhere safe first.
+
+---
+
+## First-time setup
+
+After installing, follow these steps once:
+
+1. Open **http://localhost:4015** on the computer where OptimaSN is installed.
+2. **Create your admin account** and choose a strong password.
+3. **Activate your license** with the key from your supplier.
+4. Add your product categories and products.
+5. Create other users and roles from the **Users** page if staff will use the system.
+6. Open the **System** page and note the network address if you want to use phones or other computers (see below).
+7. Copy your backup folder to another disk or USB drive regularly.
+
+---
+
+## Ports and network access
+
+OptimaSN runs as a small web server on the computer where it is installed. Staff use it through a web browser.
+
+| Port | Used for |
+|---|---|
+| **4015** | Main OptimaSN web address. On the installed computer use `http://localhost:4015`. |
+| **4016** | Local-network access used together with the secure address shown on the System page. |
+| **80 and 443** | Standard web and secure (https) access on the local network, used for phone camera scanning. |
+
+The installer opens these ports in Windows Firewall for **local network addresses only** (`10.x.x.x`, `172.16-31.x.x` and `192.168.x.x`). They are **not** opened to the public internet, so people outside your network cannot reach OptimaSN.
+
+The **System** page inside OptimaSN always shows the exact addresses to use. If you are unsure which address to type on another device, copy it from there.
+
+---
+
+## Use from phones and other computers
+
+1. Make sure the other device is on the **same Wi-Fi or network** as the OptimaSN computer.
+2. On the OptimaSN computer, open **System** and find the network address.
+3. Type that address in the browser of the phone or other computer.
+4. Log in with your OptimaSN username and password.
+
+**Phone camera scanning:** phones only allow camera access on secure pages. Use the **secure (https) address** shown on the System page. Your browser will show a certificate warning the first time because the certificate is created on your own computer. Choose to continue, and the camera will then work.
+
+**Keep the OptimaSN computer on.** Other devices can connect only while that computer is running and connected to the network.
+
+---
+
+## Backups and your data
+
+- OptimaSN stores all your data on **your own computer** in the `data` folder inside the installation folder.
+- A database backup is made automatically **every 4 hours**.
+- Backups are saved in the backup folder chosen during installation. If none was chosen, the default is `C:\ProgramData\OptimaSN\Backups`.
+- The **System** page shows the last backup time and a database health check, and has a **Sync Backup** button.
+- Copy the backup folder to **another disk or USB drive regularly**. A backup on the same disk will not help if that disk fails.
+
+---
+
+## Linux
+
+**Coming soon.** The Linux version is being prepared and is not available for download yet.
+
+Until it is released, you can:
+- Use OptimaSN on Windows (see [Download](#download)).
+- Try the [Live Demo](https://optima.ranonline.com.bd/) in any browser, including Linux.
+- Open an [issue](https://github.com/SINOBI-Melloflex/Optima-SN/issues) to be told when it is ready.
+
+---
+
+## Live demo
+
+Explore the OptimaSN interface in your browser without installing anything: **[Open OptimaSN Live Demo](https://optima.ranonline.com.bd/)**
 
 ---
 
@@ -103,7 +216,7 @@ With support for compatible QR/barcode scanners and camera-based scanning, users
 - **Sales Management:** Process product sales and maintain transaction history.
 - **Purchase Management:** Manage product purchases and stock additions.
 - **Warranty Management:** Check product warranty information.
-- **Returns & Refunds:** Manage customer returns, refunds and product replacements.
+- **Returns and Refunds:** Manage customer returns, refunds and product replacements.
 - **Customer Ledger:** Maintain customer balances, dues and transaction records.
 - **Vendor Ledger:** Manage supplier accounts, balances and outstanding payments.
 - **Due Collection:** Track and collect outstanding customer payments.
@@ -111,17 +224,15 @@ With support for compatible QR/barcode scanners and camera-based scanning, users
 - **Cash Management:** Monitor cash received, cash paid and current cash position.
 - **Operational Cost Management:** Track business expenses and operational costs.
 - **Business Analytics:** Monitor sales, profit, stock value and financial performance.
-- **Reports & Charts:** Visualize business performance through dashboard analytics.
+- **Reports and Charts:** Visualize business performance through dashboard analytics.
 - **User Management:** Manage users and system access.
-- **Role & Permission Management:** Control access to different system modules.
+- **Role and Permission Management:** Control access to different system modules.
 - **Automatic Backups:** A database backup is made automatically every 4 hours.
 - **Built-in Updates:** Check for and install new versions from inside the application.
 
 ---
 
-## Product & Inventory Management
-
-OptimaSN provides a centralized environment for managing different kinds of products and inventory operations.
+## Product and Inventory Management
 
 - Add new products to inventory.
 - Manage product information and records.
@@ -136,7 +247,7 @@ OptimaSN provides a centralized environment for managing different kinds of prod
 
 ---
 
-## Smart QR, Barcode & Camera Scanner
+## Smart QR, Barcode and Camera Scanner
 
 OptimaSN is not limited to dedicated scanner machines. The system supports flexible product scanning workflows using compatible scanners and camera-enabled devices.
 
@@ -146,11 +257,11 @@ OptimaSN is not limited to dedicated scanner machines. The system supports flexi
 - Laptop Camera
 - Mobile Phone Camera
 
-Phone camera scanning works on your local network using the secure (https) address shown on the System page.
+Phone camera scanning works on your local network using the secure (https) address shown on the System page. See [Use from phones and other computers](#use-from-phones-and-other-computers).
 
 ---
 
-## Sales & Purchase Management
+## Sales and Purchase Management
 
 ### Sales Management
 
@@ -160,7 +271,7 @@ Phone camera scanning works on your local network using the secure (https) addre
 - Access invoice information and monitor sales trends.
 - Track sold product quantities.
 
-### Purchase & Stock-In Management
+### Purchase and Stock-In Management
 
 - Record incoming products and add them to inventory.
 - Maintain stock-in records and track product quantities.
@@ -178,7 +289,7 @@ Phone camera scanning works on your local network using the secure (https) addre
 
 ---
 
-## Returns, Refunds & Replacements
+## Returns, Refunds and Replacements
 
 - Process customer product returns and record refund transactions.
 - Track returned products and manage products returned to stock.
@@ -188,7 +299,7 @@ Phone camera scanning works on your local network using the secure (https) addre
 
 ---
 
-## Customer Management & Ledger
+## Customer Management and Ledger
 
 - Maintain customer records and track customer-wise outstanding balances.
 - Manage credit-based transactions and monitor customer dues.
@@ -198,7 +309,7 @@ Phone camera scanning works on your local network using the secure (https) addre
 
 ---
 
-## Vendor & Supplier Management
+## Vendor and Supplier Management
 
 - Maintain vendor-related financial records and outstanding balances.
 - Record payments made to vendors and monitor total vendor payables.
@@ -207,7 +318,7 @@ Phone camera scanning works on your local network using the secure (https) addre
 
 ---
 
-## Ledger & Financial Management
+## Ledger and Financial Management
 
 OptimaSN integrates business financial tracking with inventory operations.
 
@@ -222,7 +333,7 @@ OptimaSN integrates business financial tracking with inventory operations.
 
 ---
 
-## Cash Management & Operational Costs
+## Cash Management and Operational Costs
 
 ### Money Position
 
@@ -239,15 +350,13 @@ OptimaSN integrates business financial tracking with inventory operations.
 
 ---
 
-## Dashboard & Business Analytics
-
-OptimaSN provides a centralized dashboard to monitor important business activities and financial statistics.
+## Dashboard and Business Analytics
 
 - Total Sales, Today's Sales and Total Profit
 - Stock Value, Available Stock and Sold Products
 - Customer Dues and Vendor Payables
 - Money Received, Money Paid and Cash Position
-- Operational Costs and Returns & Refunds
+- Operational Costs and Returns and Refunds
 - Sales Trends and Cost Trends
 - Top-Selling Products and Low-Stock Alerts
 - Product-Wise Stock Distribution
@@ -256,7 +365,7 @@ OptimaSN provides a centralized dashboard to monitor important business activiti
 
 ---
 
-## User & System Administration
+## User and System Administration
 
 - User Management
 - Role Management
@@ -274,15 +383,15 @@ OptimaSN provides a centralized dashboard to monitor important business activiti
 
 <img src="assets/screenshots/dashboard-overview.png" alt="OptimaSN Main Dashboard" width="100%">
 
-### Money Position & Operational Costs
+### Money Position and Operational Costs
 
 <img src="assets/screenshots/money-and-operational-costs.png" alt="OptimaSN Money Position and Operational Costs" width="100%">
 
-### Returns & Refunds Management
+### Returns and Refunds Management
 
 <img src="assets/screenshots/returns-and-refunds.png" alt="OptimaSN Returns and Refunds" width="100%">
 
-### Sales & Inventory Overview
+### Sales and Inventory Overview
 
 <img src="assets/screenshots/sales-and-inventory.png" alt="OptimaSN Sales and Inventory Overview" width="100%">
 
@@ -292,15 +401,15 @@ OptimaSN provides a centralized dashboard to monitor important business activiti
 
 OptimaSN is designed to support flexible inventory workflows for businesses across different industries. It is not restricted to ISP products or networking equipment.
 
-- ISP & Networking Equipment Management
-- Electronics & Accessories
-- Computer & IT Products
-- Mobile Devices & Accessories
+- ISP and Networking Equipment Management
+- Electronics and Accessories
+- Computer and IT Products
+- Mobile Devices and Accessories
 - Office Supplies
-- Hardware & Equipment
-- Wholesale & Retail Inventory
+- Hardware and Equipment
+- Wholesale and Retail Inventory
 - General Product-Based Businesses
-- Technology & Digital Product Businesses
+- Technology and Digital Product Businesses
 
 ---
 
@@ -319,34 +428,60 @@ OptimaSN is designed to support flexible inventory workflows for businesses acro
 | Vendor Ledger | Manage supplier accounts |
 | Due Collection | Monitor outstanding payments |
 | Vendor Payments | Track supplier payments |
-| Returns & Refunds | Manage returned products and refunds |
+| Returns and Refunds | Manage returned products and refunds |
 | Cash Management | Monitor business cash position |
 | Analytics | Understand business performance |
 | Operational Costs | Track business expenses |
-| Easy Install & Update | One installer, one-click updates |
+| Easy Install and Update | One installer, one-click updates |
 
 ---
 
-## Security & Access Management
+## Security and Access Management
 
-OptimaSN includes user and role-management functionality to support controlled access to system modules. Your data is stored on your own computer. Use a strong admin password, create your admin account immediately after installing, and copy your backup folder to another disk or USB drive regularly.
+OptimaSN includes user and role-management functionality to support controlled access to system modules.
 
-Official installers are published only on this GitHub page. Always verify the SHA256 checksum as described above.
+- Your data is stored on your own computer.
+- Create your admin account immediately after installing and use a strong password.
+- Network access is limited to your local network by the Windows Firewall rules created during installation.
+- Copy your backup folder to another disk or USB drive regularly.
+- Official installers are published only on this GitHub page. Always verify the SHA256 checksum as described in [Verify your download](#verify-your-download-recommended).
 
 ---
 
-## License & Activation
+## License and Activation
 
 OptimaSN runs with a license key from your supplier. Enter the key on the activation page the first time you open the app. The license is checked online, and the app keeps working for up to 7 days if the internet is temporarily unavailable.
 
 - **Check your license:** [Open the License Check page](https://sinobi-melloflex.github.io/Optima-SN-License/check/) and type your key to see if it is active and when it expires.
-- To renew or extend a license, contact your supplier.
+- **Renew or extend:** contact your supplier.
+
+---
+
+## Troubleshooting
+
+**The page http://localhost:4015 does not open.**
+Wait about 30 seconds after installing or after starting Windows, then refresh. OptimaSN starts in the background with Windows. If it still does not open, restart the computer.
+
+**Another phone or computer cannot connect.**
+Check that both devices are on the same Wi-Fi or network. Use the address shown on the **System** page, not `localhost`. Make sure the OptimaSN computer is on and not sleeping.
+
+**The phone camera does not open for scanning.**
+Use the secure (**https**) address from the System page and accept the certificate warning once.
+
+**Windows says "Windows protected your PC".**
+Click **More info**, then **Run anyway**. Only do this for the file downloaded from this page.
+
+**The license is not accepted.**
+Check the key on the [License Check page](https://sinobi-melloflex.github.io/Optima-SN-License/check/). Make sure the computer has internet access for activation. If the key is expired or invalid, contact your supplier.
+
+**I want to move OptimaSN to a new computer.**
+Copy your backup folder to the new computer, install OptimaSN there, and contact your supplier for the license.
 
 ---
 
 ## Support
 
-For technical support, project inquiries, feature discussions or collaboration, please contact the OptimaSN project team or open an issue on this page.
+For technical support, project inquiries, feature discussions or collaboration, please contact the OptimaSN project team or [open an issue](https://github.com/SINOBI-Melloflex/Optima-SN/issues) on this page.
 
 ---
 
@@ -364,6 +499,8 @@ For technical support, project inquiries, feature discussions or collaboration, 
 
   <p>
     <a href="https://github.com/SINOBI-Melloflex/Optima-SN/releases/latest/download/OptimaSN-Setup.exe">Download for Windows</a>
+    &nbsp;|&nbsp;
+    <a href="#linux">Linux (coming soon)</a>
     &nbsp;|&nbsp;
     <a href="https://optima.ranonline.com.bd/">Live Demo</a>
     &nbsp;|&nbsp;
